@@ -11,7 +11,7 @@ function slider(el) {
     }
   }
   if (window.innerWidth <= 992) {
-    setTimeout(() => slider(el), 2000);
+    setTimeout(() => slider(el), 4000);
   }
 }
 
@@ -23,15 +23,46 @@ function navbarToggle() {
   navbarCollapse.classList.toggle("opened");
   let x = toggler.getBoundingClientRect().x;
   console.log(x);
-  if (window.innerWidth <= 1200) {
-    let y = window.innerWidth - x;
-    navbarCollapse.style.paddingLeft = 0 + "px";
-    navbarCollapse.style.width = 400 + y + "px";
-    navbarCollapse.style.paddingRight = y + "px";
+  if (navbarCollapse.classList.contains("opened")) {
+    if (window.innerWidth <= 1200) {
+      let y = window.innerWidth - x;
+      navbarCollapse.style.cssText = `
+    padding-left: ${0}px;
+    width: ${400 + y}px;
+    padding-right: ${y}px;
+  `;
+    } else {
+      navbarCollapse.style.cssText = `
+    padding-left: ${x}px;
+    width: ${400 + x}px;
+    padding-right: ${0}px;
+  `;
+    }
   } else {
-    navbarCollapse.style.paddingRight = 0 + "px";
-    navbarCollapse.style.width = 400 + x + "px";
-    navbarCollapse.style.paddingLeft = x + "px";
+    navbarCollapse.style.cssText = " ";
   }
 }
 toggler.addEventListener("click", navbarToggle);
+
+// =========== tabs =============
+// const tabBtn = document.querySelectorAll(".faq__btn");
+
+// tabBtn.forEach((el) => el.addEventListener("click", tabToggler));
+
+// document.querySelector(".faq__btn").closest;
+
+// function tabToggler(e) {
+//   let tab = e.target.parentElement.parentElement;
+//   let answer = tab.querySelector(".faq__answer");
+//   answer.classList.toggle("show");
+// }
+// =====================================
+const tab = document.querySelectorAll(".faq__tab");
+
+tab.forEach((el) => el.addEventListener("click", tabToggler));
+function tabToggler(e) {
+  let answer = e.currentTarget.querySelector(".faq__answer");
+  answer.classList.toggle("show");
+  let btn = e.currentTarget.querySelector(".faq__btn");
+  btn.classList.toggle("toggled");
+}

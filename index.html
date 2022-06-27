@@ -21,13 +21,13 @@
             </div>
             <ul class="navbar__list" id="navbarCollapse">
               <li class="navbar__item">
-                <a href="" class="navbar__link">Servises</a>
+                <a href="#services" class="navbar__link">Servises</a>
               </li>
               <li class="navbar__item">
-                <a href="" class="navbar__link">Booking</a>
+                <a href="#contact" class="navbar__link">Booking</a>
               </li>
               <li class="navbar__item">
-                <a href="" class="navbar__link">F.A.Q</a>
+                <a href="#faq" class="navbar__link">F.A.Q</a>
               </li>
             </ul>
           </nav>
@@ -55,12 +55,14 @@
             <div class="slider__item hide">
               <img src="./src/img/intro/slide__2.png" alt="photo" />
             </div>
-            <div class="animation"><img src="./src/img/intro/animation.png" alt="" srcset="" /></div>
+            <a href="#contact">
+              <div class="intro__animation animation"><img src="./src/img/intro/animation.png" alt="animation" /></div>
+            </a>
           </div>
         </main>
       </div>
       <!---------------------------------->
-      <div class="services container">
+      <div class="services container" id="services">
         <div class="services__heading heading">
           <h1 class="heading__title">P.</h1>
           <h2 class="heading__subtitle">Portrait</h2>
@@ -115,6 +117,107 @@
         </div>
       </div>
       <!---------------------------------->
+      <section class="section container" id="contact">
+        <aside class="section__aside">
+          <h2 class="heading__subtitle">More question?</h2>
+          <a href="#faq">
+            <div class="section__animation animation"><img src="./src/img/faq/faq-animation.png" alt="animation" /></div>
+          </a>
+        </aside>
+        <form class="section__form form" action="#">
+          <div class="section__heading heading">
+            <h1 class="heading__title">B.</h1>
+            <h2 class="heading__subtitle">Book Your Photoshoot Now</h2>
+            <p class="heading__description">Please fill out this form</p>
+          </div>
+          <!-- ------------ name --------- -->
+          <label class="section__label label" for="name">Name</label>
+          <input class="section__input form-text" type="text" placeholder="Enter your name" />
+          <!-- -------------- phone --------------  -->
+          <label class="section__label label" for="phone">Phone</label>
+          <input class="section__input form-text" type="tel" placeholder="Enter your phone" />
+          <!-- ------------- email --------------- -->
+          <label class="section__label label" for="email">E-mail</label>
+          <input class="section__input form-text" type="email" placeholder="Enter your e-mail" />
+          <!-- -------------- photoshoot --------------- -->
+          <label class="section__label label" for="photoshoot">Photoshoot</label>
+          <select class="section__input section__input--select form-text">
+            <option class="section__option" disabled selected>Select your photoshoot type</option>
+            <option class="section__option">Portrait</option>
+            <option class="section__option">Love Story</option>
+            <option class="section__option">Street Style</option>
+          </select>
+          <!-- -------------- comment ------------- -->
+          <label class="section__label label" for="comment">Comment</label>
+          <textarea class="section__input section__input--textarea form-text" type="text" placeholder="Enter your comment" maxlength="500"></textarea>
+          <!-- ---------------- button ------------------------------  -->
+          <button class="section__input section__input--btn label">Book Now</button>
+        </form>
+      </section>
+      <!-- ------------------------------- -->
+      <div class="faq container" id="faq">
+        <div class="faq__row">
+          <div class="empty-block"></div>
+          <div class="faq__heading heading">
+            <h1 class="heading__title">F.A.Q.</h1>
+            <h2 class="heading__subtitle">Frequently asked questions</h2>
+          </div>
+        </div>
+        <div class="faq__body">
+          <aside class="faq__aside">
+            <div class="faq__image">
+              <img src="./src/img/faq/faq-img.png" alt="F.A.Q." />
+            </div>
+          </aside>
+          <div class="faq__form form" action="#">
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">How much does it cost?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">How long will the photoshoot take?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">Can I choose the shooting location by myself?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">Do you help with the choice of clothes and style?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">Do you do commercial shoots?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+            <div class="faq__tab">
+              <button class="faq__btn">+</button>
+              <h3 class="faq__label label">Do you take wedding photos?</h3>
+              <p class="faq__answer form-text">Yes, sure. But you you must make sure that shooting is allowed in this location</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------------------ -->
+      <footer class="footer container">
+        <section class="footer__section">
+          <h3 class="footer__text"><span>&COPY;</span> All Rights Reserved</h3>
+          <p class="footer__text">Anna Slepina</p>
+        </section>
+        <div class="footer__socials socials">
+          <h3 class="footer__text">My social networks:</h3>
+          <div class="socials__items">
+            <img class="socials__item" src="./src/img/Instagram.png" alt="instagram" />
+            <img class="socials__item" src="./src/img/Facebook.png" alt="facebook" />
+            <img class="socials__item" src="./src/img/WhatsApp.png" alt="whatsapp" />
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./src/script/js.js"></script>
   </body>
