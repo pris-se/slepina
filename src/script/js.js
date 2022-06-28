@@ -45,18 +45,7 @@ function navbarToggle() {
 toggler.addEventListener("click", navbarToggle);
 
 // =========== tabs =============
-// const tabBtn = document.querySelectorAll(".faq__btn");
 
-// tabBtn.forEach((el) => el.addEventListener("click", tabToggler));
-
-// document.querySelector(".faq__btn").closest;
-
-// function tabToggler(e) {
-//   let tab = e.target.parentElement.parentElement;
-//   let answer = tab.querySelector(".faq__answer");
-//   answer.classList.toggle("show");
-// }
-// =====================================
 const tab = document.querySelectorAll(".faq__tab");
 
 tab.forEach((el) => el.addEventListener("click", tabToggler));

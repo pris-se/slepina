@@ -265,7 +265,7 @@ body {
   transform: translateX(0px) translateY(11px) rotate(-45deg);
 }
 .navbar__list {
-  display: none;
+  overflow: hidden;
   visibility: hidden;
   opacity: 0;
   box-sizing: border-box;
@@ -279,6 +279,7 @@ body {
   border-bottom-right-radius: 400px;
   transition: all 0.5s linear;
   text-align: left;
+  z-index: 900;
 }
 @media (max-width: 1200px) {
   .navbar__list {
@@ -301,7 +302,6 @@ body {
   display: block;
   visibility: visible;
   opacity: 1;
-  z-index: 900;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -338,6 +338,7 @@ body {
 }
 .heading__description {
   font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .services {
@@ -434,7 +435,6 @@ body {
   }
 }
 .section__input--textarea {
-  max-width: 840px;
   max-height: 500px;
 }
 .section__option {
@@ -479,6 +479,7 @@ body {
   border: 1px solid #ffffff;
   padding: 20px 10px;
   margin-bottom: 45px;
+  cursor: pointer;
 }
 @media (max-width: 600px) {
   .faq__tab {
@@ -589,6 +590,7 @@ body {
   flex-wrap: wrap;
   padding-bottom: 20px;
   gap: 10px;
+  margin-top: 30px;
 }
 .footer__text {
   font-size: 1.25rem;
